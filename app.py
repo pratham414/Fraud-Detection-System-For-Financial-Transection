@@ -6,7 +6,8 @@ import uuid
 import datetime
 
 # Load model
-model = pickle.load("logistic_model.pickle")
+with open("logistic_model.pickle", "rb") as f:
+    model = pickle.load(f)  # ✅ Correct
 
 # Placeholder values — replace with actual training stats
 amount_mean = 1500.0
