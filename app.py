@@ -1,13 +1,12 @@
 import streamlit as st
-import pickle
+import joblib
 import numpy as np
 import math
 import uuid
 import datetime
 
 # Load model
-with open("logistic_model.pkl", "rb") as f:
-    model = pickle.load(f)  # ✅ Correct
+model = joblib.load("logistic_model.joblib")
 
 # Placeholder values — replace with actual training stats
 amount_mean = 1500.0
